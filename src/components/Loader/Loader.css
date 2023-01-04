@@ -1,0 +1,8 @@
+.loader {
+  padding: 6rem;
+  padding-bottom: 10px;
+}
+.loader img {
+  width: 50px;
+  color: rgb(204, 89, 89);
+}

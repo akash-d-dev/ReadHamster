@@ -1,0 +1,71 @@
+import React, { useState } from 'react';
+
+function SignUpForm() {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [repeatPassword, setRepeatPassword] = useState('');
+
+  const handleSubmit = event => {
+    event.preventDefault();
+    // Save the form data for this particular state here
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <label htmlFor="name">
+        Name:
+        <input
+          type="text"
+          id="name"
+          value={name}
+          onChange={event => setName(event.target.value)}
+          maxLength={30}
+          minLength={3}
+          required
+        />
+      </label>
+      <br />
+      <label htmlFor="email">
+        Email:
+        <input
+          type="email"
+          id="email"
+          value={email}
+          onChange={event => setEmail(event.target.value)}
+          required
+        />
+      </label>
+      <br />
+      <label htmlFor="password">
+        Password:
+        <input
+          type="password"
+          id="password"
+          value={password}
+          onChange={event => setPassword(event.target.value)}
+          pattern="[^A-Za-z0-9]{1,}"
+          minLength={10}
+          required
+        />
+      </label>
+      <br />
+      <label htmlFor="repeatPassword">
+        Repeat your password:
+        <input
+          type="password"
+          id="repeatPassword"
+          value={repeatPassword}
+          onChange={event => setRepeatPassword(event.target.value)}
+          required
+          minLength={10}
+          pattern="[^A-Za-z0-9]{1,}"
+        />
+      </label>
+      <br />
+      <button type="submit" disabled={password !== repeatPassword}>
+        Sign up
+      </button>
+    </form>
+  );
+}
