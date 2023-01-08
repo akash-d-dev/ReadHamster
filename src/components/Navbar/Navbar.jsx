@@ -13,12 +13,7 @@ const Navbar = () => {
       <div className="container navbar-content flex">
         <div className="brand-and-toggler flex flex-sb">
           <Link to="/" className="navbar-brand flex">
-            {/* <img
-              src="https://kalvium.community/images/logo_min.svg"
-              alt="site logo"
-            /> */}
             <img className="logo" src={logoImg} alt="site logo" />
-            {/* <span className="text-uppercase fw-7 fs-24 ls-1">Kitab.hub</span> */}
           </Link>
           <button
             type="button"
@@ -44,7 +39,7 @@ const Navbar = () => {
           <ul className="navbar-nav">
             <li className="nav-item">
               <Link
-                to="about"
+                to="form"
                 className="nav-link text-uppercase text-white fs-22 fw-6 ls-1"
               >
                 Register

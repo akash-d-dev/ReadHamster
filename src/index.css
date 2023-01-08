@@ -50,6 +50,7 @@ input {
   font-family: inherit;
   font-size: 1.6rem;
   overflow: hidden;
+  width: 90%;
 }
 .resize-animation-stopper * {
   animation: none !important;
