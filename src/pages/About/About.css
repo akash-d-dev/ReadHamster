@@ -2,13 +2,13 @@
   padding: 3rem 1vw;
 }
 .about-content {
-  gap: 4rem;
+  gap: 3rem;
 }
 .about-title {
   margin: 1rem 0;
 }
 .about-img img {
-  max-width: 520px;
+  max-width: 90%;
 }
 .about-text p {
   margin: 1.8rem 0;

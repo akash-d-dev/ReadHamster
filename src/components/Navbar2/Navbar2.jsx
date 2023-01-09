@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './Navbar.css';
+import './Navbar2.css';
 import logoImg from '../../images/logo.svg';
 import { HiOutlineMenuAlt3 } from 'react-icons/hi';
 
-const Navbar = () => {
+const Navbar2 = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const handleNavbar = () => setToggleMenu(!toggleMenu);
 
@@ -39,26 +39,10 @@ const Navbar = () => {
           <ul className="navbar-nav">
             <li className="nav-item">
               <Link
-                to="form"
-                className="nav-link text-uppercase text-white fs-22 fw-6 ls-1"
-              >
-                Register
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
                 to="/"
                 className="nav-link text-uppercase text-white fs-22 fw-6 ls-1"
               >
                 Home
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                to="about"
-                className="nav-link text-uppercase text-white fs-22 fw-6 ls-1"
-              >
-                about
               </Link>
             </li>
           </ul>
@@ -68,4 +52,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Navbar2;

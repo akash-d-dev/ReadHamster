@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './form.css';
 // import '../../../src/index.css';
 import FormInput from './FormInput';
-// import Navbar from '../../components/Navbar/Navbar';
+import Navbar2 from '../../components/Navbar2/Navbar2';
 
 const Form = () => {
   const [values, setValues] = useState({
@@ -19,9 +19,9 @@ const Form = () => {
       type: 'text',
       placeholder: 'Username',
       errorMessage:
-        "Username should be 3-16 characters and shouldn't include any special character!",
+        "* Username should be 3-30 characters and shouldn't include any special character!",
       label: 'Username',
-      pattern: '^[A-Za-z0-9]{3,16}$',
+      pattern: '^[A-Za-z0-9]{3,30}$',
       required: true,
     },
     {
@@ -29,7 +29,7 @@ const Form = () => {
       name: 'email',
       type: 'email',
       placeholder: 'Email',
-      errorMessage: 'It should be a valid email address!',
+      errorMessage: '* It should be a valid email address!',
       label: 'Email',
       required: true,
     },
@@ -39,17 +39,18 @@ const Form = () => {
       type: 'password',
       placeholder: 'Password',
       errorMessage:
-        'Password should be 8-20 characters and include at least 1 letter, 1 number and 1 special character!',
+        '* Password should atleast be 10 characters long and include at least 1 special character!',
       label: 'Password',
-      pattern: `^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,20}$`,
+      pattern: `^(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{10,}$`,
       required: true,
     },
+    // (?=.*[0-9])(?=.*[a-zA-Z])
     {
       id: 5,
       name: 'confirmPassword',
       type: 'password',
       placeholder: 'Confirm Password',
-      errorMessage: "Passwords don't match!",
+      errorMessage: "* Passwords don't match!",
       label: 'Confirm Password',
       pattern: values.password,
       required: true,
@@ -67,19 +68,21 @@ const Form = () => {
 
   return (
     <div id="formArea">
-      <form id="form" onSubmit={handleSubmit}>
-        {/* <Navbar /> */}
+      <Navbar2 />
+      <div id="wrap">
         <h1 className="formHeading">Register</h1>
-        {inputs.map(input => (
-          <FormInput
-            key={input.id}
-            {...input}
-            value={values[input.name]}
-            onChange={onChange}
-          />
-        ))}
-        <button id="submit">Submit</button>
-      </form>
+        <form id="form" onSubmit={handleSubmit}>
+          {inputs.map(input => (
+            <FormInput
+              key={input.id}
+              {...input}
+              value={values[input.name]}
+              onChange={onChange}
+            />
+          ))}
+          <button id="submit">Sign Up</button>
+        </form>
+      </div>
     </div>
   );
 };

@@ -7,29 +7,33 @@
   justify-content: center;
   flex-direction: column;
   margin: 2rem 0rem;
+  /* padding: 1rem; */
 }
 #fromArea {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 10vh;
   background-color: rgba(242, 134, 134, 0.552);
 }
 
 .form {
-  background-color: white;
+  background-color: rgba(247, 158, 158, 0.101);
   padding: 0px 60px;
   border-radius: 10px;
 }
 
 .formHeading {
   color: #ff3103;
+  background-color: rgba(242, 134, 134, 0.552);
   text-align: center;
+  margin-top: 0px;
+  box-shadow: 0px 0px 2px 2px red;
 }
 
 #submit {
   /* border: 5px solid black; */
-  margin-top: 1.5%;
+  margin-top: 1.5rem;
   width: 9rem;
   height: 4rem;
   background-color: #ff3103;
@@ -42,4 +46,8 @@
 #submit:hover {
   background-color: #ce2803;
   box-shadow: 0px 0.5px 1px 0.5px rgba(0, 0, 0, 0.201);
+}
+.wrap {
+  border: 2px solid black;
+  width: max-content;
 }
