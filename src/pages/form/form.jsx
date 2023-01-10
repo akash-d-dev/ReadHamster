@@ -65,6 +65,8 @@ const Form = () => {
     console.log(values);
     navigator('/');
     sessionStorage.setItem('userID', values.username);
+    sessionStorage.setItem('email', values.email);
+    sessionStorage.setItem('password', values.password);
   };
 
   const onChange = e => {
