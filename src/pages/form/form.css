@@ -42,7 +42,11 @@
   transition: 0.1s;
   color: aliceblue;
 }
-
+.submit:disabled {
+  background: #999;
+  /* color: #555; */
+  cursor: not-allowed;
+}
 #submit:hover {
   background-color: #ce2803;
   box-shadow: 0px 0.5px 1px 0.5px rgba(0, 0, 0, 0.201);

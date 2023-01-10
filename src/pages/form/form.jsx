@@ -1,10 +1,13 @@
+import React from 'react';
 import { useState } from 'react';
 import './form.css';
-// import '../../../src/index.css';
 import FormInput from './FormInput';
 import Navbar2 from '../../components/Navbar2/Navbar2';
+import { useNavigate } from 'react-router-dom';
 
 const Form = () => {
+  let navigator = useNavigate();
+
   const [values, setValues] = useState({
     username: '',
     email: '',
@@ -44,7 +47,7 @@ const Form = () => {
       pattern: `^(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{10,}$`,
       required: true,
     },
-    // (?=.*[0-9])(?=.*[a-zA-Z])
+
     {
       id: 5,
       name: 'confirmPassword',
@@ -60,6 +63,8 @@ const Form = () => {
   const handleSubmit = e => {
     e.preventDefault();
     console.log(values);
+    navigator('/');
+    sessionStorage.setItem('userID', values.username);
   };
 
   const onChange = e => {
@@ -80,6 +85,7 @@ const Form = () => {
               onChange={onChange}
             />
           ))}
+
           <button id="submit">Sign Up</button>
         </form>
       </div>

@@ -1,8 +1,14 @@
 import React from 'react';
-// import { Route } from 'react-router-dom';
 
-function errorPage() {
-  return <div>error 404</div>;
+function ErrorPage() {
+  return (
+    <div>
+      <pre> </pre>
+      <pre> Page not found!</pre>
+      <pre> </pre>
+      <pre> Error 404</pre>
+    </div>
+  );
 }
 
-export default errorPage;
+export default ErrorPage;

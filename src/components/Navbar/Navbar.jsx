@@ -7,7 +7,10 @@ import { HiOutlineMenuAlt3 } from 'react-icons/hi';
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const handleNavbar = () => setToggleMenu(!toggleMenu);
-
+  // const [user, setUser] = useState('guest');
+  const user = sessionStorage.getItem('userID');
+  console.log(user);
+  // if (!user) setUser('');
   return (
     <nav className="navbar" id="navbar">
       <div className="container navbar-content flex">
@@ -37,7 +40,8 @@ const Navbar = () => {
           }
         >
           <ul className="navbar-nav">
-            <li className="nav-item">
+            <li className="nav-item text-uppercase ">{user}</li>
+            <li className="nav-item ">
               <Link
                 to="form"
                 className="nav-link text-uppercase text-white fs-22 fw-6 ls-1"
@@ -67,5 +71,4 @@ const Navbar = () => {
     </nav>
   );
 };
-
 export default Navbar;
