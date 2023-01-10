@@ -8,9 +8,14 @@ const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const handleNavbar = () => setToggleMenu(!toggleMenu);
   // const [user, setUser] = useState('guest');
-  let user;
-  if (sessionStorage.getItem('userID')) user = sessionStorage.getItem('userID');
-  else user = 'Guest';
+  let user, register;
+  if (sessionStorage.getItem('userID')) {
+    user = sessionStorage.getItem('userID');
+    register = '';
+  } else {
+    user = 'Guest';
+    register = 'Register';
+  }
 
   return (
     <nav className="navbar" id="navbar">
@@ -47,7 +52,7 @@ const Navbar = () => {
                 to="form"
                 className="nav-link text-uppercase text-white fs-22 fw-6 ls-1"
               >
-                Register
+                {register}
               </Link>
             </li>
             <li className="nav-item">
