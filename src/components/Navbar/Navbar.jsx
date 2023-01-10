@@ -8,9 +8,10 @@ const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const handleNavbar = () => setToggleMenu(!toggleMenu);
   // const [user, setUser] = useState('guest');
-  const user = sessionStorage.getItem('userID');
-  console.log(user);
-  // if (!user) setUser('');
+  let user;
+  if (sessionStorage.getItem('userID')) user = sessionStorage.getItem('userID');
+  else user = 'Guest';
+
   return (
     <nav className="navbar" id="navbar">
       <div className="container navbar-content flex">
@@ -40,7 +41,7 @@ const Navbar = () => {
           }
         >
           <ul className="navbar-nav">
-            <li className="nav-item text-uppercase ">{user}</li>
+            <li className="nav-item text-uppercase userId">{user}</li>
             <li className="nav-item ">
               <Link
                 to="form"

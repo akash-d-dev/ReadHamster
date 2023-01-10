@@ -26,6 +26,11 @@
   transition: var(--transition);
   z-index: 11;
 }
+.userId {
+  background-color: rgba(243, 0, 0, 0.382);
+  padding: 0 7px;
+  text-align: center;
+}
 .navbar-collapse {
   position: fixed;
   right: 0;
