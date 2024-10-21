@@ -1,3 +1,25 @@
+# ReadHamster App
+![ReadHamster Preview](https://github.com/user-attachments/assets/d0134b15-7a14-4166-82cb-c62b4a056f05)
+
+ReadHamster is a free book-searching platform; it enables you to browse through the collection of books available on Open Library.
+Check out the live version of RentIt: [ReadHamster Live Demo](https://readhamster.netlify.app/)
+
+# Features
+
+- Login
+- Search
+- View
+
+# Technologies Used
+
+- ReadHamster is built using the following technologies:
+- React: A JavaScript library used for building the user interface
+- Context Api: It is a React state management architecture.
+- HTML: The standard markup language for creating web pages
+- CSS: A stylesheet language used for designing the application's appearance
+- JavaScript: The programming language used for client-side and server-side scripting
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
